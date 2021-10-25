@@ -43,7 +43,7 @@ $uri = $request->server['request_uri'];
   if(preg_match('/.css/', $uri))
   $uri = '/.css';
   echo "$uri\n";
-  if(preg_match('/.webp/|.png/|.jpg/|.svg/', $uri))
+  if(preg_match('/.webp|.png|.jpg|.svg/', $uri))
   $uri = '/.webp';
   echo "$uri\n";
      switch($uri) 
