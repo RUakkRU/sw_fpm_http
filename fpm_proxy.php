@@ -54,23 +54,23 @@ $uri = $request->server['request_uri'];
          case '/.css':
             $css = $request->server['request_uri'];
             $response -> header ( "Cache-Control" , "public" );
-            $response -> Header( 'Cache-Control' , 'max-age=31536000');
+            $response -> Header( "Cache-Control" , "max-age=31536000");
             $response->sendfile($css);
             break;
             case '/.webp':
                 $img = $request->server['request_uri'];
                 $response -> header ( "Cache-Control" , "public" );
-                $response -> Header( 'Cache-Control' , 'max-age=31536000');
+                $response -> Header( "Cache-Control" , "max-age=31536000");
                 $response->sendfile($img);
                 break;
                 case '/manifest.json':
                     $response -> header ( "Cache-Control" , "public" );
-                    $response -> Header( 'Cache-Control' , 'max-age=31536000');
+                    $response -> Header( "Cache-Control" , "max-age=31536000");
                     $response->sendfile('/var/www/html/manifest.json');
                     break;
                     case '/robots.txt':
                         $response -> header ( "Cache-Control" , "public" );
-                        $response -> Header( 'Cache-Control' , 'max-age=31536000');
+                        $response -> Header( "Cache-Control" , "max-age=31536000");
                         $response->sendfile('/var/www/html/robots.txt');
                         break;                     
                     }   
